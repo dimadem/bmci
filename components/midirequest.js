@@ -1,6 +1,8 @@
+//Stronger mode
+//"use strict";
 
 if (navigator.requestMIDIAccess) {
-    console.log('This browser supports WebMIDI!');
+    //console.log('This browser supports WebMIDI!');
 } else {
     console.log('WebMIDI is not supported in this browser.');
 }
@@ -32,23 +34,9 @@ function getMIDIMessage(midiMessage) {
     const velocity = midiMessage.data[2];
     const note = midiMessage.data[1];
     const command = midiMessage.data[0];
-    console.log(`Note: ${note}, Velocity: ${velocity}, Command: ${command}`);
+    //console.log(`Note: ${note}, Velocity: ${velocity}, Command: ${command}`);
 
-    //     // Switch for Arturia KEYSTEP keyboard Only
-    //     switch (command) {
-    //         case 157: //noteOn
-    //             if (velocity > 0) {
-    //                 noteOn(note, velocity);
-    //             } else {
-    //                 noteOff(note);
-    //             }
-    //             break;
-    //         case 141: //noteOff
-    //             noteOff(note);
-    //             break;
-    //     }
-    // }
-
+    //Show which notes playing
     // function noteOn(note, velocity) {
     //     console.log(note, velocity);
     // }
@@ -59,6 +47,6 @@ function getMIDIMessage(midiMessage) {
 
 //Device connected
 function updateDevices(device) {
-    console.log(`Device: ${device.port.name}!, ${device.port.state} Port: ${device.port.type}`);
-    console.log(device);
+    console.log(`Device: ${device.port.name}!, Port ${device.port.state}: ${device.port.type}`);
+    //console.log(device);
 }

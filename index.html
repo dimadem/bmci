@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/audiocontext.js" async></script>
-    <script src="/midirequest.js" async></script>
-
-    <title>Interactive Shhit!</title>
+    <title>bmci</title>
 </head>
 
 <body>
-    <button>Party Here</button>
+    <audio></audio>
+    <button class="play">Play</button>
+    <button class="stop">stop</button>
+
+    <div>
+        <input type="range" id="gain" name="volume" min="0" max="100" value="90" step="5">
+        <label for="gain">Volume</label>
+    </div>
+    <!-- Script is starting here -->
+    <script src="./components/audiocontext.js"></script>
+    <script src="./components/midirequest.js"> </script>
 </body>
 
 </html>
